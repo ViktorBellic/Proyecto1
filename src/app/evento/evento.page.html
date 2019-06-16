@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>evento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>
+
+<ion-footer>
+    <!-- Aca debera ir: home-marketPlace-Eventos-    -->
+      <ion-toolbar>     
+         <!-- <ion-buttons slot="secondary">-->
+              <ion-row >
+                  <ion-col>
+                      <ion-buttons (click)="goHome()">
+                        <ion-button>
+                            <!--<ion-icon slot="icon-only" style="zoom:2.0;" name="home"></ion-icon>-->
+                          <ion-icon style="zoom:1.5;" name="home"></ion-icon>
+                        </ion-button>
+                      </ion-buttons>
+                  </ion-col>
+                  <ion-col>
+                      <ion-buttons (click)="goMarketPlace()">
+                        <ion-button>
+                          <ion-icon style="zoom:1.5;" name="cash"></ion-icon>
+                        </ion-button>
+                      </ion-buttons>
+                  </ion-col>
+                  <ion-col>
+                      <ion-buttons (click)="goEventos()">
+                        <ion-button>
+                          <ion-icon style="zoom:1.5;" name="trophy"></ion-icon>
+                        </ion-button>
+                      </ion-buttons>
+                  </ion-col>
+                  <ion-col>
+                      <ion-buttons><!--Aca debera ir un despliegue de lista de amigos-->
+                        <ion-button>
+                            <ion-icon style="zoom:1.5;" name="contacts"></ion-icon>                         
+                        </ion-button>
+                      </ion-buttons>
+                  </ion-col>
+                </ion-row>
+        </ion-toolbar>
+  </ion-footer>
+  

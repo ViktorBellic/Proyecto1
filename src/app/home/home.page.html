@@ -1,14 +1,135 @@
 <ion-header>
+
+
   <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title color="tertiary">
+     TCG-Scan {{username}}
+    </ion-title>  
+    <ion-buttons slot="primary" (click)="goMiPerfil()"> 
+      <ion-button color="tertiary"><ion-icon slot="start" name="person"></ion-icon></ion-button>
+    </ion-buttons>
+       <!--Boton log-out--> 
+       <ion-buttons slot="primary">
+      <ion-button color="tertiary" (click)="prosesLogout()"><ion-icon slot="end" name="log-out"></ion-icon></ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-card>
+    <!-- SECCION DE FOTOS-->
+    <ion-card-header>
+      <ion-img src="assets/img/1.jpg"></ion-img>
+      <ion-card-subtitle>Ionic its works</ion-card-subtitle>
+      <ion-card-title>{{username}}</ion-card-title>
+    </ion-card-header>
+    <!-- SECCION DE FOTOS-->
+
+    <!-- SECCION DE likes,shares, y mas-->
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+            <ion-buttons>
+            <ion-button color="tertiary"><ion-icon style="zoom:1.5;" name="heart-empty"></ion-icon></ion-button>
+            <ion-button color="tertiary"><ion-icon style="zoom:1.5;" name="text"></ion-icon></ion-button>
+            <ion-button color="tertiary"><ion-icon style="zoom:1.5;" name="open"></ion-icon></ion-button>
+            </ion-buttons>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+              <ion-badge color="medium" slot="end">88</ion-badge> <ion-badge color="danger"slot="end">66</ion-badge> 
+          </ion-item>
+        </ion-col>
+      </ion-row>    
+    </ion-card-content>
+    <!-- SECCION DE likes,shares, y mas-->
+  </ion-card> 
+
+  <ion-card>
+      <ion-card-header>
+          <ion-img src="assets/img/1.jpg"></ion-img>
+        <ion-card-subtitle>Ionic its works</ion-card-subtitle>
+        <ion-card-title>{{username}}</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        {{username}}
+      </ion-card-content>
+    </ion-card> 
+
+    <ion-card>
+        <ion-card-header>
+          <ion-img src="assets/img/1.jpg"></ion-img>
+          <ion-card-subtitle>Ionic its works</ion-card-subtitle>
+          <ion-card-title>{{username}}</ion-card-title>
+        </ion-card-header>
+    
+        <ion-card-content>
+          {{username}}
+        </ion-card-content>
+      </ion-card> 
+
+      <ion-card>
+          <ion-card-header>
+              <ion-img src="assets/img/1.jpg"></ion-img>
+            <ion-card-subtitle>Ionic its works</ion-card-subtitle>
+            <ion-card-title>{{username}}</ion-card-title>
+          </ion-card-header>
+      
+          <ion-card-content>
+            {{username}}
+          </ion-card-content>
+        </ion-card> 
+
+        <ion-card>
+            <ion-card-header>
+                <ion-img src="assets/img/1.jpg"></ion-img>
+              <ion-card-subtitle>Ionic its works</ion-card-subtitle>
+              <ion-card-title>{{username}}</ion-card-title>
+            </ion-card-header>
+        
+            <ion-card-content>
+              {{username}}
+            </ion-card-content>
+          </ion-card> 
+  
 </ion-content>
+
+<ion-footer>
+  <!-- Aca debera ir: home-marketPlace-Eventos-    -->
+    <ion-toolbar>     
+       <!-- <ion-buttons slot="secondary">-->
+            <ion-row >
+                <ion-col>
+                    <ion-buttons>
+                      <ion-button>
+                          <!--<ion-icon slot="icon-only" style="zoom:2.0;" name="home"></ion-icon>-->
+                        <ion-icon style="zoom:1.5;" name="home"></ion-icon>
+                      </ion-button>
+                    </ion-buttons>
+                </ion-col>
+                <ion-col>
+                    <ion-buttons (click)="goMarketPlace()">
+                      <ion-button>
+                        <ion-icon style="zoom:1.5;" name="cash"></ion-icon>
+                      </ion-button>
+                    </ion-buttons>
+                </ion-col>
+                <ion-col>
+                    <ion-buttons (click)="goEventos()">
+                      <ion-button>
+                        <ion-icon style="zoom:1.5;" name="trophy"></ion-icon>
+                      </ion-button>
+                    </ion-buttons>
+                </ion-col>
+                <ion-col>
+                    <ion-buttons><!--Aca debera ir un despliegue de lista de amigos-->
+                      <ion-button>
+                          <ion-icon style="zoom:1.5;" name="contacts"></ion-icon>                         
+                      </ion-button>
+                    </ion-buttons>
+                </ion-col>
+              </ion-row>
+      </ion-toolbar>
+</ion-footer>

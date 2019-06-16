@@ -1,17 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PostProvider } from '../../providers/post-provider';
 import { ToastController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-perfil',
+  templateUrl: './perfil.page.html',
+  styleUrls: ['./perfil.page.scss'],
 })
-export class HomePage {
+export class PerfilPage implements OnInit {
+
   username: string;
   anggota: any;
+
   constructor(
     private router: Router,
     private postPvdr: PostProvider,
@@ -19,26 +21,15 @@ export class HomePage {
     public storage: Storage
   ) { }
 
-  ionViewWillEnter(){
+  ngOnInit() {
+  }
+ionViewWillEnter(){
     this.storage.get('session_storage').then((res) => {
       this.anggota = res;
       this.username = this.anggota.username;
-      
+      console.log(this.username);
     });
   }
-
-  goMiPerfil(){
-    this.router.navigate(['/perfil']);
-  }
-
-  goMarketPlace(){
-    this.router.navigate(['/marketplace']);
-  }
-  goEventos(){
-    this.router.navigate(['/evento']);
-  }
-
-  
 
   async prosesLogout(){
     this.storage.clear();
@@ -51,6 +42,13 @@ export class HomePage {
 
   }
 
-  
-
+  goMarketPlace(){
+    this.router.navigate(['/marketplace']);
+  }
+  goEventos(){
+    this.router.navigate(['/evento']);
+  }
+  goHome(){
+    this.router.navigate(['/home']);
+  }
 }
