@@ -41,7 +41,9 @@ ionViewWillEnter(){
     toast.present();
 
   }
-
+  goMiPerfil(){
+    this.router.navigate(['/perfil']);
+  }
   goMarketPlace(){
     this.router.navigate(['/marketplace']);
   }
