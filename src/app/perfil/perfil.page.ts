@@ -27,8 +27,11 @@ ionViewWillEnter(){
     this.storage.get('session_storage').then((res) => {
       this.anggota = res;
       this.username = this.anggota.username;
-      console.log(this.username);
+      //console.log(this.username);
     });
+  }
+  onRateChange(event) {
+    console.log('Your rate:', event);
   }
 
   async prosesLogout(){

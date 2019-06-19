@@ -37,6 +37,9 @@ export class HomePage {
   goEventos(){
     this.router.navigate(['/evento']);
   }
+  openChat(){
+    this.router.navigate(['/chat']);
+  }
 
   
 

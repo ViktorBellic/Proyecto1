@@ -6,11 +6,11 @@
      TCG-Scan {{username}}
     </ion-title>  
     <ion-buttons slot="primary" (click)="goMiPerfil()"> 
-      <ion-button color="tertiary"><ion-icon slot="start" name="person"></ion-icon></ion-button>
+      <ion-button ><ion-icon slot="start" style="zoom:1.5;" name="person"></ion-icon></ion-button>
     </ion-buttons>
        <!--Boton log-out--> 
        <ion-buttons slot="primary">
-      <ion-button color="tertiary" (click)="prosesLogout()"><ion-icon slot="end" name="log-out"></ion-icon></ion-button>
+      <ion-button (click)="prosesLogout()"><ion-icon slot="end" style="zoom:1.5;" name="log-out"></ion-icon></ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -20,7 +20,7 @@
   <ion-card>
     <!-- SECCION DE FOTOS-->
     <ion-card-header>
-      <ion-img src="assets/img/1.jpg"></ion-img>
+      <ion-img  class="icon" src="assets/img/1.jpg"></ion-img>
       <ion-card-subtitle>Ionic its works</ion-card-subtitle>
       <ion-card-title>{{username}}</ion-card-title>
     </ion-card-header>
@@ -46,9 +46,10 @@
     <!-- SECCION DE likes,shares, y mas-->
   </ion-card> 
 
+<!--RELLENO-->
   <ion-card>
       <ion-card-header>
-          <ion-img src="assets/img/1.jpg"></ion-img>
+          <ion-img class="icon" src="assets/img/1.jpg"></ion-img>
         <ion-card-subtitle>Ionic its works</ion-card-subtitle>
         <ion-card-title>{{username}}</ion-card-title>
       </ion-card-header>
@@ -60,7 +61,7 @@
 
     <ion-card>
         <ion-card-header>
-          <ion-img src="assets/img/1.jpg"></ion-img>
+          <ion-img class="icon" src="assets/img/1.jpg"></ion-img>
           <ion-card-subtitle>Ionic its works</ion-card-subtitle>
           <ion-card-title>{{username}}</ion-card-title>
         </ion-card-header>
@@ -72,7 +73,7 @@
 
       <ion-card>
           <ion-card-header>
-              <ion-img src="assets/img/1.jpg"></ion-img>
+              <ion-img class="icon" src="assets/img/1.jpg"></ion-img>
             <ion-card-subtitle>Ionic its works</ion-card-subtitle>
             <ion-card-title>{{username}}</ion-card-title>
           </ion-card-header>
@@ -84,7 +85,7 @@
 
         <ion-card>
             <ion-card-header>
-                <ion-img src="assets/img/1.jpg"></ion-img>
+                <ion-img class="icon" src="assets/img/1.jpg"></ion-img>
               <ion-card-subtitle>Ionic its works</ion-card-subtitle>
               <ion-card-title>{{username}}</ion-card-title>
             </ion-card-header>
@@ -93,7 +94,7 @@
               {{username}}
             </ion-card-content>
           </ion-card> 
-  
+  <!--FIN DEL RELLENO-->
 </ion-content>
 
 <ion-footer>
@@ -124,7 +125,7 @@
                     </ion-buttons>
                 </ion-col>
                 <ion-col>
-                    <ion-buttons><!--Aca debera ir un despliegue de lista de amigos-->
+                    <ion-buttons (click)="openChat()"><!--Aca debera ir un despliegue de lista de amigos-->
                       <ion-button>
                           <ion-icon style="zoom:1.5;" name="contacts"></ion-icon>                         
                       </ion-button>

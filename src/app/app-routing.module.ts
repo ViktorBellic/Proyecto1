@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'marketplace', loadChildren: './marketplace/marketplace.module#MarketplacePageModule' },
   { path: 'evento', loadChildren: './evento/evento.module#EventoPageModule' },
   { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
+  { path: 'chat', loadChildren: './chat/chat.module#ChatPageModule' },
 ];
 
 @NgModule({

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { PostProvider } from '../../providers/post-provider';
-import { ToastController } from '@ionic/angular';
-import { Storage } from '@ionic/storage';
+import { Router } from '@angular/router'; // Import para redireccionar a otras paginas
+import { PostProvider } from '../../providers/post-provider'; // Este import sirve para enviar datos a las API de base de datos
+import { ToastController } from '@ionic/angular'; // Import para notificaciones
+import { Storage } from '@ionic/storage'; // Este import es importante para almacenar los datos de un usuario
 
 @Component({
   selector: 'app-login',
@@ -13,6 +13,7 @@ export class LoginPage implements OnInit {
 
   username: string;
   password: string;
+  // Se crean los recursos a utilizar en el constructor
   constructor(
     private router: Router,
     private postPvdr: PostProvider,
@@ -23,6 +24,7 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+  // Si te encuentras con un metodo mas o menos asi es solo para rediccionmiento 
   formRegister() {
     this.router.navigate(['/register']);
   }

@@ -4,21 +4,33 @@
          TCG-Scan {{username}}
         </ion-title>  
         <ion-buttons slot="primary" (click)="goMiPerfil()"> 
-          <ion-button ><ion-icon slot="start" name="person"></ion-icon></ion-button>
+          <ion-button ><ion-icon slot="start" style="zoom:1.5;" name="person"></ion-icon></ion-button>
         </ion-buttons>
            <!--Boton log-out--> 
            <ion-buttons slot="primary">
-          <ion-button (click)="prosesLogout()"><ion-icon slot="end" name="log-out"></ion-icon></ion-button>
+          <ion-button (click)="prosesLogout()"><ion-icon slot="end" style="zoom:1.5;" name="log-out"></ion-icon></ion-button>
         </ion-buttons>
       </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-img src="assets/img/2.jpg"></ion-img>
+  <ion-img class="icon" src="assets/img/2.jpg"></ion-img>
   <ion-card>
     <ion-card-header>
       <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
       <ion-card-title>Card Title</ion-card-title>
+      <ion-card>
+        <ion-card-content>
+            <ion-item lines="none">
+                <ion-label  position="stacked">Rate this item </ion-label>
+                 <!--<rating  [rate]="rate"
+                      readonly="false" 
+                      size="default"
+                      (rateChange)="onRateChange($event)">
+                </rating>--> 
+             </ion-item>
+        </ion-card-content>
+    </ion-card>
     </ion-card-header>
   
     <ion-card-content>

@@ -12,14 +12,27 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { HttpModule } from '@angular/http';
 import { PostProvider } from '../providers/post-provider';
+// Import ionic-rating module
+import { IonicRatingModule } from 'ionic4-rating';
 
+import { firebaseConfig } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
+import { ChatComponent } from './componentes/chat/chat.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, ChatComponent],
+  entryComponents: [ChatComponent],
   imports: [
-    BrowserModule, 
+    FormsModule,
+    BrowserModule,
     HttpModule,
-    IonicModule.forRoot(), 
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    IonicRatingModule,
+    IonicModule.forRoot(),
     AppRoutingModule,
     IonicStorageModule.forRoot()
   ],
@@ -27,7 +40,8 @@ import { PostProvider } from '../providers/post-provider';
     StatusBar,
     SplashScreen,
     PostProvider,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: FirestoreSettingsToken, useValue: {}}
   ],
   bootstrap: [AppComponent]
 })
